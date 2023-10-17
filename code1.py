@@ -14,3 +14,22 @@
 
 # N is an integer within the range [0..200,000];
 # string S is made only of lowercase letters (a−z).
+
+
+
+def even_word(S):
+    char_count=0
+    S=S.lower()
+    N=len(S)
+    if N in range(200000):
+        for char in set(S):
+            x=S.count(char)
+            if x%2 != 0:
+                char_count+=1
+            else:
+                char_count==0
+        return char_count
+    else:
+        return 'Input string within between 0 and 200,000 characters'
+print(even_word('acbcbba'))
+
