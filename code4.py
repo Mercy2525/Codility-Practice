@@ -19,11 +19,11 @@
 
 
 def solution(A):
-    multiples=0
+    multiples=None
     for N in A:
-        if N %4 == 0 and N > multiples:
+        if N % 4 == 0:
             multiples = N
     return multiples
         
         
-print(solution([-6, -91, 1011, -100, 84, -22, 0, 1, 473]))
+print(solution([-6, -91, 1011, -100, -22, 1,-400,-10]))
