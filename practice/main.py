@@ -16,3 +16,19 @@ friends=['Mary','Abel','John']
 new_fr=friends.copy()
 
 print(friends)
+
+
+sentence="Panda has 48 apples and loses 4"
+# sentence=sentence.split()
+numbers=[]
+
+import re
+nums=re.findall(r'\d+', sentence)#returns a list, secondvalis a string
+all=[int(num) for num in nums]
+print(all[0]-all[1])
+# for val in sentence:
+#     numbers.append(int(val))
+# print(numbers)
+    
+        
+# print(int(sentence[2])+int(sentence[6]))
