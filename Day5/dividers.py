@@ -10,24 +10,50 @@
 
 # Once you find those dividers, sort them in ascending order, and VOILA!
 
-import math
+# import math
 
-def get_dividers(values, powers):
-    prod_powers=[]
-    for val,pow in zip(values,powers):
-        prod_powers.append(val**pow)
-    product=math.prod(prod_powers)
+# def get_dividers(values, powers):
+#     prod_powers=[]
+#     for val,pow in zip(values,powers):
+#         prod_powers.append(val**pow)
+#     product=math.prod(prod_powers)
 
 
-    dividers=[]
-    for i in range(1,product+1):
-        if product%i==0:
-            dividers.append(i)
-    return dividers
+#     dividers=[]
+#     for i in range(1,product+1):
+#         if product%i==0:
+#             dividers.append(i)
+#     return dividers
             
+
+# print(get_dividers([5, 7, 11],[2, 1, 1]))
+
+
+
+
+# Don't forget to sort your result list!
+import math
+def get_dividers(values, powers):
+    product=math.prod([value**power for value,power in zip(values,powers)])
+    return [i for i in range(1,product+1) if product%i==0]
+
+  
+
 
 print(get_dividers([5, 7, 11],[2, 1, 1]))
 
 
 
 
+
+
+
+
+
+
+# garden=['Tractor','Cows','Maize']
+# levels=[1,2,4,]
+
+# for gar,lev in zip(garden,levels):
+#     if lev==1:
+#         print(gar)

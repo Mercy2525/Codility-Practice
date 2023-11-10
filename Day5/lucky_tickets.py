@@ -4,11 +4,15 @@
 # 123444 is not lucky, i.e. 1+2+3 doesn't equal to 4+4+4
 
 
-def lucky_number(alist):
-    if sum(alist[:3])==sum(alist[3:]):
-        pass
-    pass
+def lucky_number(ticket):
+    status='lucky'
 
-numb=[1,2,3,3,2,1]
-print(sum(numb[:3]))
-print(numb[3:])
+    ticket_str=str(ticket)
+    digit_list=[int(digit) for digit in ticket_str]
+
+    if sum(digit_list[:3])!=sum(digit_list[3:]):
+        status=' not lucky'
+
+    return status
+
+print(lucky_number(123123))
