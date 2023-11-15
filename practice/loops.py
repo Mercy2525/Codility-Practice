@@ -99,13 +99,7 @@ list1 = [
   { 'firstName': 'Madison', 'lastName': 'U.', 'country': 'United States', 'continent': 'Americas', 'age': 32, 'language': 'Ruby' } 
 ]
 
-def greet_developers(lst): 
-    for developer in lst:
-        greeting = f"Hi {developer['firstName']}, what do you like most about {developer['language']}?"
-        developer['greeting'] = greeting
-        
-    
-    return lst
+
 
 def greet_developers(lst): 
     for developer in lst:
